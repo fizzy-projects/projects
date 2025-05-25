@@ -27,35 +27,35 @@
         <div id="calculator">
             <div id="calcHead">
                 <div id="calcDisplay">
-                    
+                    <div id="calcText"></div>   
                 </div>
             </div>
             
             
             <div id="keys">
                 <div class="rowofkeys">
-                    <div onclick="">7</div>
-                    <div onclick="">8</div>
-                    <div onclick="">9</div>
-                    <div onclick="">/</div>
+                    <div onclick="pressNum(7)">7</div>
+                    <div onclick="pressNum(8)">8</div>
+                    <div onclick="pressNum(9)">9</div>
+                    <div onclick="pickOperator(divide)">/</div>
                 </div>
                 <div class="rowofkeys">
-                    <div onclick="">4</div>
-                    <div onclick="">5</div>
-                    <div onclick="">6</div>
-                    <div onclick="">x</div>
+                    <div onclick="pressNum(4)">4</div>
+                    <div onclick="pressNum(5)">5</div>
+                    <div onclick="pressNum(6)">6</div>
+                    <div onclick="pickOperator(multiply)">x</div>
                 </div>
                 <div class="rowofkeys">
-                    <div onclick="">1</div>
-                    <div onclick="">2</div>
-                    <div onclick="">3</div>
-                    <div onclick="">-</div>
+                    <div onclick="pressNum(1)">1</div>
+                    <div onclick="pressNum(2)">2</div>
+                    <div onclick="pressNum(3)">3</div>
+                    <div onclick="pickOperator(subtract)">-</div>
                 </div>
                 <div id="lastrow" class="rowofkeys">
-                    <div onclick="">C</div>
-                    <div onclick="">0</div>
-                    <div onclick="">=</div>
-                    <div onclick="">+</div>
+                    <div onclick="clearDisplay()">C</div>
+                    <div onclick="pressNum(0)">0</div>
+                    <div onclick="operate()">=</div>
+                    <div onclick="pickOperator(add)">+</div>
                 </div>
 
        

@@ -7,17 +7,21 @@
         padding:0.5em;
         padding-top: 0.9em;
 
-        & #calcDisplay {
-            width: 10em;
+        & #calcDisplay {            
             background-color: whitesmoke;
-            padding-top: 1em;
-            height: 1.7em;
 
-            & h4 {
+            & #calcText {
+                box-sizing: content-box;
+                min-width: 10em;
+                min-height: 1.5em;
+                padding: 5px;
+                padding-top: 20px;
                 text-align: right;
-                padding:8px;
                 font-style: italic;
+                font-weight: bold;
+                font-size: large;
             }
+
         }
     }
 }
@@ -60,5 +64,7 @@
 .rowofkeys > div:hover{
     background-color: aqua;
 }
+
+
 
 

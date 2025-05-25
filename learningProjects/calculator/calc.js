@@ -20,31 +20,47 @@ function divide(x,y){
     }
 };
 
-let mynum;
+let myNum;
 let operator;
 let operand;
 
-function operate(operator,mynum,operand){
+function operate(){
+    operand=Number(calcDisplay.textContent);
     if (operator==add){
-        return add(mynum,operand);
+        myNum=add(myNum,operand);
     }
     else if (operator==subtract){
-        return subtract(mynum,operand);
+        myNum=subtract(myNum,operand);
     }
     else if (operator==multiply){
-        return multiply(mynum,operand);
+        myNum=multiply(myNum,operand);
     }
     else if (operator==divide){
-        return divide(mynum,operand);
+        myNum=divide(myNum,operand);
     }
+    calcDisplay.textContent=`${myNum}`
+    operator=undefined;
+    operand=undefined;
+    myNum=undefined;
 }
 
-const calcDisplay=document.querySelector("#calcDisplay");
-//const calcText=document.createElement("div");
-//calcText.textContent="helllo";
-//calcDisplay.appendChild(calcText);
-let calcText=5;
-calcDisplay.textContent=calcText;
+const calcDisplay=document.querySelector("#calcText");
+calcDisplay.textContent="";
+
+function pressNum(num){
+    calcDisplay.textContent+=`${num}`;
+}
+
+function clearDisplay(){
+    calcDisplay.textContent="";
+}
+function pickOperator(choice) {
+    myNum=Number(calcDisplay.textContent);
+    clearDisplay();
+    operator=choice;
+}
+
+
 
 
 
